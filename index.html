@@ -230,15 +230,16 @@
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin-top: 1.5rem;
+            align-items: start;
         }
 
         @media (max-width: 640px) {
             .category-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 0.75rem;
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
 
@@ -246,9 +247,13 @@
             background: rgba(25, 25, 25, 0.95);
             border: 1px solid #444;
             border-radius: 10px;
-            padding: 1.25rem;
+            padding: 1.5rem;
             text-align: center;
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 280px;
         }
 
         .category-card:hover {
@@ -256,17 +261,29 @@
         }
 
         .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
         }
 
         .category-card h3 {
-            font-size: clamp(1rem, 4vw, 1.25rem);
-            margin-bottom: 0.5rem;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            margin-bottom: 1rem;
+            color: #ff6666;
+            flex-shrink: 0;
         }
 
         .category-card p {
-            font-size: clamp(0.8rem, 3vw, 0.9rem);
+            font-size: clamp(0.85rem, 3vw, 0.95rem);
+            line-height: 1.5;
+            flex: 1;
+            margin-bottom: 1rem;
+        }
+
+        .category-card .stars {
+            margin-top: auto;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
 
         .form-group {
@@ -669,7 +686,7 @@
 
                 <div class="category-card">
                     <div class="category-icon">🦌</div>
-                    <h3>Game Grief</div>
+                    <h3>Game Grief</h3>
                     <p>Wild game that died free-range but still angry. These specimens often display the rage of the wilderness combined with disappointment in human hunting practices.</p>
                     <div class="stars">Average Anger: ★★★★★</div>
                 </div>
@@ -928,11 +945,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
